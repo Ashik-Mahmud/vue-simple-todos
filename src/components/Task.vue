@@ -67,6 +67,7 @@ import { onMounted, reactive, ref } from 'vue';
                 <ul class="flex flex-col gap-3 " v-if="state.tasks?.length">
                     <li class="flex items-center gap-2 w-full justify-between p-3 bg-slate-50 hover:bg-slate-100" 
                         v-for="(task,index) in state.tasks" :key="index"
+                        title="Double click to edit"
                         @dblclick="openEditMode(task, index)"
                     >
                         <span>{{task}}</span> 
